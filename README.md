@@ -1,1 +1,1 @@
-# Statistics-For-Data-Science
+# Statistics-and-Probability-For-Data-Science
