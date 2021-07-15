@@ -8,8 +8,7 @@ The topics that are going to be covered here are listed below.
 + Bayes theorem
 + Probability distributions
 + Measures of central tendency
-+ Dispersion
-+ Skewness and kurtosis
++ Dispersion - Skewness and kurtosis
 + Sampling
 + Central limit theorem
 + Hypothesis testing
