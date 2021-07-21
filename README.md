@@ -17,7 +17,6 @@ The topics that are going to be covered here are listed below.
 + p-value
 + Parametric tests
 + z-test
-+ t-test
-+ Paired tests
++ t-test, paired t-test
 + Analysis of variance [ANOVA]
 + Nonparametric tests (chi-square test)
