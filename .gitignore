@@ -131,6 +131,6 @@ dmypy.json
 # checkpoints
 .ipynb_checkpoints/
 
-# data files
+# data files (csv, txt)
 *.csv
 *.txt
