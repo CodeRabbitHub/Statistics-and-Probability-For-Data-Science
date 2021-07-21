@@ -15,7 +15,9 @@ The topics that are going to be covered here are listed below.
 + Confidence levels
 + Level of significance
 + p-value
-+ Parametric tests (One- and two-sample z-tests, One- and two-sample t-tests)
++ Parametric tests
++ z-test
++ t-test
 + Paired tests
 + Analysis of variance [ANOVA]
 + Nonparametric tests (chi-square test)
