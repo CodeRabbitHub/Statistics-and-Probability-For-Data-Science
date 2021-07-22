@@ -17,4 +17,4 @@ The topics that are going to be covered here are listed below.
 + t-test, paired t-test
 + Analysis of variance [ANOVA]
 + Nonparametric tests [chi-square test]
-+ Effect size, Corelation, Power and Power Analysis.
++ Effect size, Correlation, Power and Power Analysis.
