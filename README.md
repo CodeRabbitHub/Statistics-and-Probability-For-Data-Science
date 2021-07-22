@@ -1,6 +1,6 @@
 # Statistics-and-Probability-For-Data-Science
 
-In this repository I'll cover essential concepts in statistics and probability and understand how to solve statistical problems with Python.
+In this repository I'll be covering essential concepts in statistics and probability using python. 
 
 The topics that are going to be covered here are listed below.
 + Permutations and Combinations
