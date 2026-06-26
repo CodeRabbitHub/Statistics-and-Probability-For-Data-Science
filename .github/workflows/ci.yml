@@ -1,0 +1,55 @@
+name: Test Notebooks
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11"]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Install Jupyter kernel
+      run: python -m ipykernel install --user
+
+    - name: Execute all notebooks (except NB17 which requires external Kaggle data)
+      run: |
+        FAILED=0
+        for nb in *.ipynb; do
+          # Skip NB17 — requires Kaggle train.csv not bundled in repo
+          if [[ "$nb" == "17."* ]]; then
+            echo "SKIP (external data): $nb"
+            continue
+          fi
+          echo "Running: $nb"
+          python -m nbconvert --to notebook --execute --inplace \
+            --ExecutePreprocessor.timeout=300 "$nb"
+          if [ $? -ne 0 ]; then
+            echo "FAIL: $nb"
+            FAILED=$((FAILED+1))
+          else
+            echo "PASS: $nb"
+          fi
+        done
+        if [ $FAILED -gt 0 ]; then
+          echo "$FAILED notebook(s) failed."
+          exit 1
+        fi
+        echo "All notebooks passed."
