@@ -271,4 +271,4 @@ MLE as neural network training · MAP as regularisation · CLT in stochastic gra
 
 MIT License — see [LICENSE](LICENSE) for details.
 
-Copyright (c) 2021 Aman Roland
+Copyright (c) 2021–2026 Aman Roland
